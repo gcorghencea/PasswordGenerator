@@ -48,4 +48,16 @@ public class GeneratorTest {
         assertThat(characters, everyItem(greaterThanOrEqualTo(48)));
         assertThat(characters, everyItem(lessThanOrEqualTo(57)));
     }
+
+    @Test
+    public void specialCharactersTest(){
+        Generator generator = new Generator();
+        List<Integer> characters = new ArrayList<Integer>();
+        for (int i = 0; i <= 100; i++) {
+            characters.add((int) generator.getRandomFromSpecialCharacters());
+        }
+        System.out.println(characters);
+        assertThat(characters, everyItem(greaterThanOrEqualTo(32)));
+        assertThat(characters, everyItem(lessThanOrEqualTo(47)));
+    }
 }

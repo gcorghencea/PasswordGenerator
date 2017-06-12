@@ -15,10 +15,13 @@ class Generator {
 
     Character getRandomFromLetters() {
         throw new NotImplementedException();
-        //return null;
     }
 
     Character getRandomFromNumbers() {
+        throw new NotImplementedException();
+    }
+
+    Character getRandomFromSpecialCharacters() {
         throw new NotImplementedException();
     }
 }
